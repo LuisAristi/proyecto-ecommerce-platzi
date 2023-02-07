@@ -4,14 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>yardsale</title>
+    <style>
+        :root{
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-fill: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+        }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 68px;
+            justify-self: center;
+            /*display: none;*/
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle{
+            color: var(--black);
+            font-size: var(--md);
+            font-weight: 200;
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input{
+            background-color: var(--text-input-fill);
+            border: 0px;
+            width: 300px;
+            height: 36px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+        .primary-button{
+            width: 300px;
+            height: 56px;
+            background-color: var(--hospital-green);
+            font-size: var(--lg);
+            font-weight: bold;
+            color: var(--white);
+            border: 0px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <div class="login">
             <div class="form-container">
                 <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
                 <h1 class="title">Create a new password</h1>
-                <p class="subtitle">Enter a new password</p>
+                <p class="subtitle">Enter a new password for your account</p>
+                <form action="/" class="form">
+                    <label for="Password" class="label">Password</label>
+                    <input type="password" id="password" placeholder="**********" class="input input-password">
+                    <label for="New-password" class="label">Re-enter password</label>
+                    <input type="password" id="new-password" placeholder="**********" class="input input-password">
+
+                    <input type="submit" value="Confirm new password" class="primary-button login-button">
+                </form>
             </div>
     </div>
 </body>
