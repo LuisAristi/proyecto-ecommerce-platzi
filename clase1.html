@@ -38,7 +38,7 @@
             width: 150px;
             margin-bottom: 68px;
             justify-self: center;
-            /*display: none;*/
+            display: none;
         }
         .title{
             font-size: var(--lg);
@@ -46,9 +46,9 @@
             text-align: center;
         }
         .subtitle{
-            color: var(--black);
+            color: var(--very-light-pink);
             font-size: var(--md);
-            font-weight: 200;
+            font-weight: 400;
             margin-top: 0;
             text-align: center;
             margin-bottom: 48px;
@@ -70,11 +70,22 @@
             width: 300px;
             height: 56px;
             background-color: var(--hospital-green);
-            font-size: var(--lg);
+            font-size: var(--md);
             font-weight: bold;
             color: var(--white);
             border: 0px;
             border-radius: 8px;
+            cursor: pointer;
+        }
+        .login-button{
+            margin-top: 12px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
         }
     </style>
 </head>
